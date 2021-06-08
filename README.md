@@ -1,26 +1,18 @@
-# svgaplayer-weapp
+# svgaplayer-tt
 
-专为微信小程序开发的 SVGA 播放器，已在 iOS 及 Android 手机上测试通过。
+专为字节跳动小程序开发的 SVGA 播放器，已在 iOS 及 Android 手机上测试通过，由于字节跳动开发工具限制，暂不支持在开发工具预览。
 
-示例代码片段 https://developers.weixin.qq.com/s/u2JBSOmy7rqU
-
-请仔细阅读文档和示例，如有疑问，可添加作者微信(ponycui)，有偿提供技术服务。
-
-有偿提供其它平台小程序 svgaplayer 开发服务。
+请仔细阅读文档和示例，如有疑问，可添加作者微信(ponycui)，可提供技术服务。
 
 ## 支持本仓库
 
-如果 svgaplayer-weapp 为您提供了便利与帮助，诚恳建议您通过以下方式支持作者、贡献者持续为该项目发电。
-
-1. 轻点 GitHub Star，让更多人看到该项目。
-2. 通过 [爱发电](https://afdian.net/@ponycui/plan) 月度捐赠的方式支持作者持续维护该仓库。
-3. 如果您需要更深度的技术支持服务，也可以通过上述爱发电平台，成为银牌、金牌会员，作者将为您提供单独的顾问服务。
+轻点 GitHub Star，让更多人看到该项目。
 
 ## 安装方法
 
 ### 原生小程序
 
-1. 直接复制 `./dist/svgaplayer.weapp.js` 到你的小程序工程目录下。
+1. 直接复制 `./dist/svgaplayer.tt.js` 到你的小程序工程目录下。
 
 2. 在需要添加播放器的 `wxml` 文件内，添加 `canvas` 组件，注意 canvas 的 id 必填，下一步会用到，type 必须为 2d。
 
@@ -33,7 +25,7 @@
 3. 在需要播放的时机，这里是 `onLoad`，执行以下代码，即可播放动画。
 
 ```js
-const { Parser, Player } = require("../../libs/svgaplayer.weapp"); // 此处替换为 svgaplayer.weapp.js 放置位置
+const { Parser, Player } = require("../../libs/svgaplayer.tt"); // 此处替换为 svgaplayer.tt.js 放置位置
 
 Page({
   data: {
@@ -55,14 +47,14 @@ Page({
 
 ### Taro
 
-1. 通过 `npm install git+https://github.com/svga/svgaplayer-weapp.git --save` 安装依赖。
+1. 通过 `npm install git+https://github.com/svga/svgaplayer-tt.git --save` 安装依赖。
 
 2. 参照以下代码添加 Canvas 并配置动画。
 
 ```typescript
 import { Component } from 'react'
 import { View, Text, Canvas } from '@tarojs/components'
-import { Parser, Player } from "svgaplayer-weapp";
+import { Parser, Player } from "svgaplayer-tt";
 
 import "taro-ui/dist/style/components/button.scss" // 按需引入
 import './index.scss'

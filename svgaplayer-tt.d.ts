@@ -37,4 +37,4 @@ interface DynamicText {
   offset: { x: number; y: number };
 }
 
-export default svgaplayer - weapp;
+export default "svgaplayer-tt";

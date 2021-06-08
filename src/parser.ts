@@ -6,7 +6,7 @@ export class Parser {
   load(url: string): Promise<VideoEntity> {
     return new Promise((resolver, rejector) => {
       if (url.indexOf("http://") === 0 || url.indexOf("https://") === 0) {
-        wx.request({
+        tt.request({
           url: url,
           responseType: "arraybuffer",
           success: (res) => {
@@ -20,7 +20,7 @@ export class Parser {
           },
         });
       } else {
-        wx.getFileSystemManager().readFile({
+        tt.getFileSystemManager().readFile({
           filePath: url,
           success: (res) => {
             const inflatedData = inflate(res.data as any);

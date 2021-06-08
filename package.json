@@ -1,15 +1,14 @@
 {
-  "name": "svgaplayer-weapp",
+  "name": "svgaplayer-tt",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/svgaplayer.weapp.js",
-  "typings": "svgaplayer-weapp.d.ts",
+  "main": "dist/svgaplayer.tt.js",
+  "typings": "svgaplayer-tt.d.ts",
   "scripts": {
-    "build": "node build.js > ./dist/svgaplayer.weapp.js"
+    "build": "node build.js > ./dist/svgaplayer.tt.js"
   },
   "author": "",
   "license": "ISC",
-  "miniprogram": "dist",
   "devDependencies": {
     "@types/wechat-miniprogram": "^3.3.0",
     "browserify": "^17.0.0",
